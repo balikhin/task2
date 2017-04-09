@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="citySelectBox.js"></script>
+    <script src = "personActions.js"></script>
+  </head>
+
+  <body onload="showCities('rus')">
+
+    <form method="post" onsubmit="addPerson(); return false;">
+      <p>Имя:<br>
+        <input type="text" name="name">
+      </p>
+      <p>email:<br>
+        <input type="text" name="email">
+      </p>
+      <p>Страна:<br>
+        <select id="country" onchange="showCities(this.value)">
+          <option value="rus">Россия</option>
+          <option value="ukr">Украина</option>
+          <option value="kaz">Казахстан</option>
+        </select>
+      </p>
+      <p>Город:<br>
+        <select id="city"> 
+        </select>
+      </p>
+      <p>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить">
+      </p>
+    </form> 
+
+    <table id="persons">
+    </table>
+
+ 
+
+  </body>
+</html>
