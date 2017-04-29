@@ -3,24 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="citySelectBox.js"></script>
-    <script src = "personActions.js"></script>
+    <script src="scrpt.js"></script>
   </head>
 
-  <body onload="showCities('rus')">
+  <body onload="showCountries();">
+  	
+  	<form id="form" onsubmit="addPerson(); return false;" method="">
 
-    <form method="post" onsubmit="addPerson(); return false;">
-      <p>Имя:<br>
-        <input type="text" name="name">
+  	  <p>Имя:<br>
+        <input id="personName" type="text">
       </p>
       <p>email:<br>
-        <input type="text" name="email">
+        <input id="email" type="text">
       </p>
       <p>Страна:<br>
-        <select id="country" onchange="showCities(this.value)">
-          <option value="rus">Россия</option>
-          <option value="ukr">Украина</option>
-          <option value="kaz">Казахстан</option>
+        <select id="country">
         </select>
       </p>
       <p>Город:<br>
@@ -31,12 +28,9 @@
         <input type="submit" value="Отправить">
         <input type="reset" value="Очистить">
       </p>
-    </form> 
+  	</form>
 
-    <table id="persons">
+    <table id="table">
     </table>
 
- 
-
   </body>
-</html>
